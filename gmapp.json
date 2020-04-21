@@ -1,0 +1,14 @@
+{
+  "name":"Pega",
+  "id":"97172827",
+  "template": "Blank",
+  "version": "0.0.0",
+  "src": "src",
+  "dist": "dist",
+  "main": "index.html",
+  "icon": "pega-logo.svg",
+  "developer": "Ryan",
+  "category": "General",
+  "type": "RemoteLow",
+  "description": "Generated on 3/26/2020, 10:40:02 AM by ngi-sdk version "
+}
