@@ -6,7 +6,7 @@
   "src": "src",
   "dist": "dist",
   "main": "index.html",
-  "icon": "pega-logo.svg",
+  "icon": "pega-icon.png",
   "developer": "Ryan",
   "category": "General",
   "type": "RemoteLow",

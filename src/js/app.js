@@ -1,4 +1,3 @@
-// Your code goes here
 const vin = gm.info.getVIN();
 const host = "http://gmcdh.pegatsdemo.com";
 const streamPort = "7003"
@@ -66,7 +65,6 @@ function success(){
 }
 
 function callCustomerService() {
-  //alert("calling customer service");
   var id = gm.voice.startTTS(success, "Please keep your eyes on the road");
   gm.voice.stopTTS(id);
   gm.ui.showAlert({
@@ -81,7 +79,6 @@ function callCustomerService() {
 
 function oilInd(data) {
   var oilIndValue = data.change_oil_ind;
-  //alert(oilInd);
   sendEvent('change_oil_ind',oilIndValue)
 }
 
@@ -129,6 +126,30 @@ function generateEventID() {
   //today.getFullYear()+''+(today.getMonth()+1)+''+today.getDate()+''+today.getHours()+''+today.getMinutes()+''+today.getSeconds()+''+today.getMilliseconds();
   return today.getUTCFullYear()+''+(today.getUTCMonth()+1)+''+today.getUTCDate()+''+
   today.getUTCHours()+''+today.getUTCMinutes()+''+today.getUTCSeconds()+''+today.getUTCMilliseconds();
+}
+
+//Button handler
+var buttonHandler;
+
+getButtons(initButtons);
+
+function initButtons(availableButtons) {
+  if(includesBack(availableButtons)) {
+    // Only initialize watchButtons IF there _IS_ a back button
+    // Cadillacs do not have back buttons.
+    buttonHandler = gm.info.watchButtons(buttonSuccess, ['BTN_BACK']);
+  }
+}
+
+function buttonSuccess(buttons) {
+  // buttons is an array of button strings, corresponding to which events fired.
+  if(includesBack(buttons)) {
+    myApp.goBack();
+  }
+}
+
+function includesBack(array) {
+  return array.indexOf('BTN_BACK') > -1;
 }
 
 /*
