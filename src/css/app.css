@@ -20,9 +20,10 @@
 }
 
 .closelink {
-  color:white;
+  color: white;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 18px;
+  margin-right: 20px;
 }
 
 #close img {
@@ -50,11 +51,48 @@
 body {
   background-color: black;
 }
+body, html {
+  height: calc(100% - 90px);
+}
 
 #nba {
   
 }
 
 #nbacontent {
-  text-align:left;
+  text-align: left;
+  font-size: 1.05em;
+  color: #b2B2B2;
+}
+
+#nbacontent b {
+  font-size: 1.2em;
+  color: #FFFFFF;
+}
+
+button, select {
+	text-transform: none;
+  border-radius: 3px;
+  border: 1px solid #E3CB7F;
+  padding: 10px;
+  background-color: rgba(255,255,255,.2);
+  color: #E3CB7F;
+  width: 240px;
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 600 !important;
+  font-size: 22px;
+  color: #b2b2b2;
+}
+
+a.go-back {
+  font-weight: 600;
+  color: #295ED9;
+  margin-right: 12px;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  top: -2px;
 }
