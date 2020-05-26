@@ -30,7 +30,7 @@ function networkManager(connected) {
     .then(json)
     .then(function (data) {
       //console.log('Request succeeded with JSON response', data);
-      nbaHTML = "<h2>Next Best Actions</h2><div id=\"nbacontent\"><table>";
+      nbaHTML = "<h2>Your Next Best Actions</h2><div id=\"nbacontent\"><table>";
       
       //If no NBAs are returned, display a default message
       if(data.ContainerList[0].NextBestActions.length <= 0)
