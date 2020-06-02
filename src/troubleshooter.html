@@ -22,11 +22,13 @@
     <script src="GMLIB/phone.js"></script>
     <script src="GMLIB/ui.js"></script>
     <script src="GMLIB/voice.js"></script>
+    <script src="js/interaction.js"></script>
 
   </head>
-  <body>
+  <body onload="setInteraction('ivh','PEGACRM-ENTITY-CONTACT CON-20512','1000001303');">
+    <var id="interactionID" style="display: none;"></var>
     <div id="wrapper">
-      <div id="close"> <a class="go-back" href="index.html">Go back</a><!--img src="images/close.png" onclick="gm.system.closeApp()" alt="close"--><a href="#" onclick="gm.system.closeApp()" class="closelink">X</a></div>
+      <div id="close"> <a class="go-back" href="index.html" onclick="resolveInteraction('Resolved-Completed');">Go back</a><!--img src="images/close.png" onclick="gm.system.closeApp()" alt="close"--><a href="#" onclick="gm.system.closeApp()" class="closelink">X</a></div>
       <div id="main">
         <br>       
         <!-- ********************** Begin Pega content ********************** -->
